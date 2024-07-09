@@ -61,7 +61,7 @@ style = "bold yellow"
 [username]
 style_user = "bold dimmed blue"
 style_root = "black bold"
-format = "[ $user]($style) "
+format = "[ $user]($style) "
 disabled = false
 show_always = true
 
