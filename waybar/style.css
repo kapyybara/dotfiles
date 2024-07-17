@@ -14,17 +14,18 @@ window#waybar {
 }
 /*-----module groups----*/
 .modules-right {
-	background-color: rgba(0,43,51,0.85);
-    margin: 2px 10px 0 0;
+	background-color: #0f1419;
+    margin: 2px 8px 0 0;
 }
 .modules-center {
-	background-color: rgba(0,43,51,0.85);
+	background-color: #0f1419;
     margin: 2px 0 0 0;
+    padding: 0 8px ;
 }
 .modules-left {
-	background-color: rgba(0,43,51,0.85);
-    margin: 2px 10px 0 0;
-    padding: 0 4px;
+	background-color: #0f1419;
+    margin: 2px 0 0 8px;
+    padding: 0 8px 0 4px;
 }
 /*-----modules indv----*/
 #workspaces button {
@@ -53,7 +54,7 @@ window#waybar {
 #custom-power,
 #custom-menu,
 #idle_inhibitor {
-    padding: 0 10px;
+    padding: 0 8px;
 }
 #mode {
     color: #cc3436;
