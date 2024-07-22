@@ -14,7 +14,7 @@ window#waybar {
 }
 /*-----module groups----*/
 .modules-right {
-	background-color: #0f1419;
+	background-color: rgb(15, 20, 25);
     margin: 2px 8px 0 0;
 }
 .modules-center {
