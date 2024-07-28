@@ -1,5 +1,5 @@
-if type -q exa
-  alias ll "exa -l -g --icons"
+if type -q eza
+  alias ll "eza -l -g --icons"
   alias lla "ll -a"
 end
 
@@ -8,7 +8,7 @@ set -gx PATH "$HOME/.cargo/bin" $PATH;
 # end
 
 # Nvm Node
-set --universal nvm_default_version v16.19.0
+set --universal nvm_default_version v20
 nvm use
 # end
 
@@ -44,7 +44,7 @@ export DENO_INSTALL="/home/samsa/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Alias
-alias vy "nvim"
+alias vi "nvim"
 alias pn "pnpm"
 alias python "python3"
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
@@ -64,10 +64,9 @@ alias pwoff "shutdown now"
 alias 1.1 "warp-cli connect"
 alias 1.0 "warp-cli disconnect"
 
-alias rm="rm -i"
+alias rm "rm -i"
 alias top bpytop
 alias nf "neofetch"
-
 
 
 starship init fish | source
