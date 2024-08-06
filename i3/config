@@ -5,6 +5,10 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:JetBrainsMono Nerd Font 8
 
+bar {
+  mode hide
+}
+
 # Theme 
 # Catppuccin
 set $rosewater #f5e0dc
@@ -41,21 +45,6 @@ client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
-
-# bar
-bar {
-  colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
-    focused_workspace  $base $base $green
-    active_workspace   $base $base $blue
-    inactive_workspace $base $base $surface1
-    urgent_workspace   $base $base $surface1
-    binding_mode       $base $base $surface1
-  }
-}
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -181,6 +170,15 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# set workspace for per monitor
+
+workspace 1 output HDMI-0
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output HDMI-0
+workspace 5 output DP-0
+workspace 6 output DP-2
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -245,3 +243,4 @@ exec_always --no-startup-id xrandr --output DP-2 --auto --pos 0x800 \
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpapers/bkg3_bkg5.png
+exec_always --no-startup-id killall i3bar

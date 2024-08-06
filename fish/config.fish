@@ -1,10 +1,10 @@
 if type -q eza
-  alias ll "eza -l -g --icons"
-  alias lla "ll -a"
+    alias ll "eza -l -g --icons"
+    alias lla "ll -a"
 end
 
 # Rust cargo
-set -gx PATH "$HOME/.cargo/bin" $PATH;
+set -gx PATH "$HOME/.cargo/bin" $PATH
 # end
 
 # Nvm Node
@@ -19,7 +19,7 @@ alias pn=pnpm
 # end
 
 # Golang
-set -gx GO_HOME "/usr/local/go/bin"
+set -gx GO_HOME /usr/local/go/bin
 set -gx PATH "$GO_HOME" $PATH
 # end
 
@@ -29,13 +29,13 @@ set -u PRETTIERD_DEFAULT_CONFIG "/home/iwku/.config/nvim/plugin.prettierrc.json"
 
 # The fuck 
 function fuck -d "Correct your previous console command"
-  set -l fucked_up_command $history[1]
-  env TF_SHELL=fish TF_ALIAS=fuck PYTHONIOENCODING=utf-8 thefuck $fucked_up_command THEFUCK_ARGUMENT_PLACEHOLDER $argv | read -l unfucked_command
-  if [ "$unfucked_command" != "" ]
-    eval $unfucked_command
-    builtin history delete --exact --case-sensitive -- $fucked_up_command
-    builtin history merge ^ /dev/null
-  end
+    set -l fucked_up_command $history[1]
+    env TF_SHELL=fish TF_ALIAS=fuck PYTHONIOENCODING=utf-8 thefuck $fucked_up_command THEFUCK_ARGUMENT_PLACEHOLDER $argv | read -l unfucked_command
+    if [ "$unfucked_command" != "" ]
+        eval $unfucked_command
+        builtin history delete --exact --case-sensitive -- $fucked_up_command
+        builtin history merge ^ /dev/null
+    end
 end
 # end
 
@@ -44,10 +44,15 @@ export DENO_INSTALL="/home/samsa/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Alias
-alias vi "nvim"
-alias pn "pnpm"
-alias python "python3"
+alias vi nvim
+alias pn pnpm
+alias python python3
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
+alias dk docker
+alias dkll "docker ps"
+alias dkla "docker ps -a"
+alias dks "docker start"
+
 
 # git
 alias ga "git add"
@@ -66,8 +71,7 @@ alias 1.0 "warp-cli disconnect"
 
 alias rm "rm -i"
 alias top bpytop
-alias nf "neofetch"
+alias nf neofetch
 
 
 starship init fish | source
-
