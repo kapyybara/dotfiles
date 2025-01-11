@@ -89,3 +89,4 @@ else
 end
 # <<< conda initialize <<<
 
+fish_vi_key_bindings
