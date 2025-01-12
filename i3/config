@@ -4,8 +4,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:JetBrainsMono Nerd Font 8
 bar {
-  tray_output none
-  mode hide
+  mode invisible
 }
 
 # Theme 
@@ -55,8 +54,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # gap
 
-gaps inner  4
-gaps outer 4
+gaps inner  2
+gaps outer 2
 #gaps horizontal 10
 #gaps vertical 10
 
@@ -239,8 +238,9 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id xrandr --output DP-2 --auto --pos 0x0 \
                --output HDMI-0 --auto --rate 60 --pos 0x1080
 
-exec_always --no-startup-id killall i3bar
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpapers/bkg3_bkg5.png
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpapers/1.png
 exec_always --no-startup-id picom --config ~/.config/picom.conf
 
+# Thiết lập phím tắt Flameshot GUI
+bindsym $mod+Shift+s exec flameshot gui
